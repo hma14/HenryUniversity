@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HenryUniversity", "HenryUniversity\HenryUniversity.csproj", "{4D074C54-5680-4577-BBA8-926E19E70487}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HenryUniversity.UnitTests", "HenryUniversity.UnitTests\HenryUniversity.UnitTests.csproj", "{0E5001A9-9A83-4EA2-ACC0-DFEA34E89147}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D074C54-5680-4577-BBA8-926E19E70487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D074C54-5680-4577-BBA8-926E19E70487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D074C54-5680-4577-BBA8-926E19E70487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D074C54-5680-4577-BBA8-926E19E70487}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E5001A9-9A83-4EA2-ACC0-DFEA34E89147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E5001A9-9A83-4EA2-ACC0-DFEA34E89147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E5001A9-9A83-4EA2-ACC0-DFEA34E89147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E5001A9-9A83-4EA2-ACC0-DFEA34E89147}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

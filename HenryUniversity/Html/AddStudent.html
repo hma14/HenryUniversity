@@ -1,0 +1,17 @@
+﻿<div class="container" ng-app="universityApp" ng-controller="studentCtrl" ng-init="get()">
+
+    <div class="row">
+        <form name="AddNewStudent" ng-submit="addStudent()">
+            First Name<input name="FName" type="text" ng-model="FName" class="form-control form-group" required />
+            <span class="error" ng-show="AddNewStudent.FName.$dirty && AddNewStudent.FName.$invalid">Enter First Name</span>
+
+            Last Name<input name="LName" type="text" ng-model="LName" class="form-control form-group" required />
+            <span class="error" ng-show="AddNewStudent.LName.$dirty && AddNewStudent.LName.$invalid">Enter Last Name</span>
+
+            Enrollment Date<input name="EnrollmentDate" type="text" ng-model="EnrollDate" class="form-control form-group" required />
+            <span class="error" ng-show="AddNewStudent.EnrollmentDate.$dirty && AddNewStudent.EnrollmentDate.$invalid">Enter Enrollment Date</span>
+
+            <input type="submit" value="Add New Student" class="btn btn-info btn-primary btn-sm" />
+        </form>
+    </div>
+</div>

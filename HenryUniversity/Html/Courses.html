@@ -1,0 +1,34 @@
+﻿<div class="container" ng-app="universityApp" ng-controller="courseCtrl" ng-init="getAll()">
+
+    <div class="row">
+        Search: <input ng-model="query" type="text" class="form-control form-group" />
+        <table class="table table-condensed table-responsive">
+            <thead>
+                <tr>
+                    <th><a href="" ng-click="sortField='Title';reverse=!reverse">Title</a></th>
+                    <th><a href="" ng-click="sortField='Credits';reverse=!reverse">Credits</a></th>
+                    <th><a href="" ng-click="sortField='DepartmentName';reverse=!reverse">DepartmentName</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="c in courses | filter:query | orderBy:sortField:reverse">
+                    <td>{{c.Title}}</td>
+                    <td>{{c.Credits}}</td>
+                    <td>{{c.DepartmentName}}</td>
+                    <td>
+                        <div>
+                            <a href="#/editcourse" class="linkButton" ng-click="editCourse(c)">Edit</a>
+                            <a href="" class="linkButton" ng-click="deleteCourse(c)">Delete</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <a href="#/addcourse" class="btn btn-default btn-link btn-md">Add new Course</a>
+    </div>
+
+</div>
+

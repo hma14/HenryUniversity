@@ -1,0 +1,19 @@
+﻿<div id="bodyContainer" ng-app="universityApp" ng-controller="studentCtrl">
+
+    <section id="content">
+
+        <div class="alert alert-danger" ng-hide="error == ''" ng-cloak>
+            <p ng-message="required">{{error}}</p>
+        </div>
+        
+        <form ng-submit="updateStudent()">
+            First Name<input type="text" ng-model="FirstMidName" class="form-control form-group"  />
+            Last Name<input type="text" ng-model="LastName" class="form-control form-group"  />
+            <!--Enrollment Date:<input type="text" ng-model="EnrollmentDate | date:'yyyy-MM-dd'" class="form-control form-group"  />-->
+            Enrollment Date<input type="text" ng-model="EnrollmentDate" class="form-control form-group" />
+
+            <input type="submit" value="Update Student" class="btn btn-info btn-primary btn-sm" />
+        </form>
+        
+    </section>
+</div>

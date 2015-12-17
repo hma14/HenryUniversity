@@ -1,0 +1,43 @@
+﻿<div class="container" ng-app="universityApp" ng-controller="courseCtrl">
+
+    <div class="row">
+
+        <div class="alert alert-danger" ng-hide="error == ''" ng-cloak>
+            <p ng-message="required">{{error}}</p>
+        </div>
+
+        <form name="UpdateCourse" ng-submit="updateCourse()" class="form-horizontal">
+
+            <label class="control-label" for="CourseID">Course ID</label>
+            <input id="CourseID" type="text" ng-model="CourseID" class="form-control form-group"
+                   readonly="readonly" />
+            <div class="control-group error">
+                <label class="control-label" for="Title">Title</label>
+                <div class="controls">
+                    <input name="Title" id="Title" type="text" ng-model="Title" class="form-control form-group" required />
+                    <span class="help-inline" ng-show="UpdateCourse.Title.$dirty && UpdateCourse.Title.$invalid">Enter a Title</span>
+                </div>
+            </div>
+            <div class="control-group error">
+                <label class="control-label" for="Credits">Title</label>
+                <div class="controls">
+                    <input name="Credits" id="Credits" type="number" ng-model="Credits" min="0" max="5" class="form-control form-group" required />
+                    <span class="help-inline" ng-show="UpdateCourse.Credits.$dirty && UpdateCourse.Credits.$invalid">Enter a Credits</span>
+                </div>
+            </div>
+            <div class="control-group error">
+                <label class="control-label" for="departmentID">Department</label>
+                <div class="controls">
+                    <select name="departmentID" id="departmentID" class="form-control form-group" ng-model="Department"
+                            ng-options="department.Name for department in departments  | orderBy: 'Name'" required>
+                        <option value="" ng-selected="selected">Select Department</option>
+                    </select>
+                    <span class="help-inline" ng-show="UpdateCourse.departmentID.$dirty && UpdateCourse.departmentID.$invalid">Select a Department</span>
+                </div>
+            </div>
+            <br />
+            <input type="submit" value="Update Course" class="btn btn-info btn-primary btn-sm" />
+
+        </form>
+    </div>
+</div>

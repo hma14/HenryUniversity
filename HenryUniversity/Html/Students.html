@@ -1,0 +1,35 @@
+﻿<div class="container" ng-app="universityApp" ng-controller="studentCtrl" ng-init="getAll()">
+
+    <div class="row">
+        Search: <input ng-model="query" type="text" class="form-control form-group" />
+        <table class="table table-condensed table-responsive">
+            <thead>
+                <tr>
+                    <th><a href="" ng-click="sortField='FullName';reverse=!reverse">Student Full Name</a></th>
+                    <th><a href="" ng-click="sortField='EnrollmentDate';reverse=!reverse">Student Enrolled Date</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="s in students | filter:query | orderBy:sortField:reverse">
+                    <td>
+                        {{s.FullName}}
+                    </td>
+                    <td>
+                        {{s.EnrollmentDate  | date:'yyyy-MM-dd'}}
+                    </td>
+                    <td>
+                        <div>
+                            <a href="#/editstudent" class="linkButton" ng-click="editStudent(s)">Edit</a>
+                            <a href="" class="linkButton" ng-click="deleteStudent(s)">Delete</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <a href="#/addstudent" class="btn btn-default btn-link btn-md">Add new Student</a>
+    </div>
+
+
+</div>

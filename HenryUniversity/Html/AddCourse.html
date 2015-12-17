@@ -1,0 +1,25 @@
+﻿<div class="container" ng-app="universityApp" ng-controller="courseCtrl">
+
+    <div class="row">
+        <form name="AddNewCourse" ng-submit="addCourse()">
+            Course ID<input name="CourseID" type="text" ng-model="CourseID" class="form-control form-group" required />
+            <span class="error" ng-show="AddNewCourse.CourseID.$dirty && AddNewCourse.CourseID.$invalid">Enter a CourseID</span>
+
+            Title<input name="Title" type="text" ng-model="Title" class="form-control form-group" required />
+            <span class="error" ng-show="AddNewCourse.Title.$dirty && AddNewCourse.Title.$invalid">Enter a Title</span>
+
+            Credits<input name="Credits" type="text" ng-model="Credits" class="form-control form-group" required />
+            <span class="error" ng-show="AddNewCourse.Credits.$dirty && AddNewCourse.Credits.$invalid">Enter a Credits</span>
+
+            Department
+            <select name="departmentID" class="form-control" ng-model="Department"
+                    ng-options="department.Name for department in departments  | orderBy: 'Name'" required>
+                <option value="" ng-selected="selected">Select Department</option>
+            </select>
+            <span class="error" ng-show="AddNewCourse.departmentID.$dirty && AddNewCourse.departmentID.$invalid">Select Department</span>
+            <br />
+            <input type="submit" value="Add new Course" class="btn btn-info btn-primary btn-sm" />
+
+        </form>
+    </div>
+</div>

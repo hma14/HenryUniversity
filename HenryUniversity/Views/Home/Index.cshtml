@@ -1,0 +1,22 @@
+﻿<div id="bodyContainer" ng-app="universityApp">
+
+    <ul class="alert alert-danger alert-dismissable" ng-show="errors && errors.length">
+        <li ng-repeat="error in errors">
+            {{error}}
+        </li>
+    </ul>
+    <div ng-view></div>
+
+</div>
+
+@section scripts {
+    @Scripts.Render("~/Scripts/angular.js")
+    @Scripts.Render("~/Scripts/angular-route.min.js")
+    @Scripts.Render("~/Scripts/angular-animate.min.js")
+    @Scripts.Render("~/Scripts/angular-resource.js")
+    @Scripts.Render("~/Scripts/app/resource.js")
+    @Scripts.Render("~/Scripts/app/university-app.js")
+    @Scripts.Render("~/Scripts/app/studentController.js")
+    @Scripts.Render("~/Scripts/app/courseController.js")
+
+}
